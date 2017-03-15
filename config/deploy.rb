@@ -2,12 +2,12 @@
 lock "3.8.0"
 
 set :application, "rails-intro"
-set :repo_url, "git@github.com:ArnaudDroxler/rails-intro.git"
+set :repo_url, "https://github.com/ArnaudDroxler/rails-intro.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :branch "the-end"
+#set :branch "the-end"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/arnaud/www/rails-intro"
 
@@ -38,7 +38,7 @@ namespace :deploy do
   after :finished, :restart_puma do
     on roles(:web) do
       execute :sudo, 'service puma-arnaud restart'
-      execute :sudo, ‘service nginx reload’
+      execute :sudo, 'service nginx reload'
     end
   end
 end
