@@ -7,7 +7,7 @@ set :repo_url, "https://github.com/ArnaudDroxler/rails-intro.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-#set :branch "the-end"
+set :branch, "the-end"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/arnaud/www/rails-intro"
 
